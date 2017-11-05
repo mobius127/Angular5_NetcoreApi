@@ -1,0 +1,46 @@
+<h2>{{title}}</h2>
+
+<!-- <div *ngIf="selectedHero">
+  <h2>{{selectedHero.Name}} details!</h2>
+  <div>
+    <label>id: </label>{{selectedHero.Id}}</div>
+  <div>
+    <label>name: </label>
+    <input [(ngModel)]="selectedHero.Name" placeholder="name" />
+  </div>
+</div> -->
+
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
+
+<ul class="heroes">
+  <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onselect(hero)">
+    <span class="badge">{{hero.Id}}</span> {{hero.Name}}
+  </li>
+</ul>
+
+<!-- <h1>
+  {{title}}
+</h1>
+
+
+<div class="container-fluid">
+  <div class="col-lg-12">
+    <div class="form-group">
+      <label for="">Nombre:</label>
+      <input type="text" class="form-control" name="txtName" id="txtName" aria-describedby="helpId" placeholder=""
+      [(ngModel)]="hero.Name" >
+      <small id="helpId" class="form-text text-muted">Help text</small>
+    </div>
+  </div>
+</div>
+
+<div class="container-fluid">
+  <div class="col-lg-12">
+    <ul class="list-group">
+      <li class="list-group-item" *ngFor="let hero of heroes">
+        <span class="font-weight-bold">Nombre: </span> {{hero.Name}}
+      </li>
+    </ul>
+  </div>
+</div>
+ -->
